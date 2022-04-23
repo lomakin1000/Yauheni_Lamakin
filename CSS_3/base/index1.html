@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+div{width: 150px;
+}
+
+    div.main > div {background-color: grey; border: solid black 1px; position: relative; cursor: pointer}
+    div.menu {display: none }
+    div.menu > div { background-color: grey; border: solid black 1px; cursor: pointer}
+    div.main > div:hover div.menu {display: block; position: absolute;left: 100%;top: 0%;}
+   
+
+@media all and (min-width: 899px){
+        .main{
+    display:inline-flex;
+    width: 900px;
+    }
+    div.main > div {background-color: grey; border: solid black 1px; position: relative; cursor: pointer}
+    div.menu {display: none }
+    div.menu > div { background-color: grey; border: solid black 1px; cursor: pointer}
+    div.main > div:hover div.menu {display: block; position: absolute;left: 0%; top: 100%;}
+   
+}
+
+</style>
+    
+    <title>Document</title>
+</head>
+<body>
+
+<div class="main">
+<div>Понедельник</div>
+<div>Вторник</div>
+
+<div>Среда
+<div class="menu">
+    <div>завтрак</div>
+    <div>обед</div>
+    <div>ужин</div>
+</div> 
+</div>
+    
+<div>Четверг</div>
+<div>Пятница</div>
+<div>Суббота</div>
+</div>
+
+</body>
+</html>
