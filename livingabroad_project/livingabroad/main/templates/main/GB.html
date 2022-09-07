@@ -25,29 +25,16 @@
                 There is not much better than lazing by the river in the sunshine, dancing in the mud at a music festival, 
                 or heading out for a snowball fight.</p>
                 <div class="btn-group dropend weather-drop">
-                    <a class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" style="color: red;" >
-                        weather during the year
-                    </a>
-                    <ul class="dropdown-menu drop-weather">
-                      <li class="dropdown-item weather-1" > <img src="{% static 'main/pictures/weather.png' %}" alt="weather in uk" width=500px height=300px> </li>
-                    </ul>
+                    <details >
+                        <summary class="btn btn-secondary btn-light dropdown-toggle"  style="color: red;" >Weather during the year</summary> 
+                        <img src="{% static 'main/pictures/weather.png' %}" alt="weather in uk" width=500px height=300px>                      
+                      </details>
                 </div>
                 <div class="btn-group dropend weather-drop">
-                    <a class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" style="color: rgb(15, 15, 190);"  >
-                        what Brits wear
-                    </a>
-                    <ul class="dropdown-menu drop-weather weather-2">
-                      <li ><a class="dropdown-item weather-1">   Most UK towns and cities have a large range of shops selling <br>
-                        clothes to suit all styles and budgets. <br>
-                        Wear several layers so you can put them on or take <br>
-                        them off as the weather changes, and always carry an umbrella. <br>
-                        The UK is a multicultural place <br>
-                        and it is common for people to wear clothing associated with their <br>
-                        culture and religion, for example a head scarf, kippah, turban, <br>
-                        sari or long skirt. In major towns and cities you will find <br>
-                        specialist shops selling clothing from around the world, particularly <br>
-                        from Asia and the Middle East.</a></li> 
-                    </ul>
+                  <details >
+                    <summary class="btn btn-secondary btn-light dropdown-toggle"  style="color: rgb(15, 15, 190);" > what Brits wear</summary> 
+                   <img src="{% static 'main/pictures/wearing.png' %}" alt="weather in uk" width=500px height=450px>>                   
+                  </details>
                 </div>
             </div>
           </div>

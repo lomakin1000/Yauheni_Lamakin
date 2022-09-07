@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'. - полный путь к проекту
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,13 +37,17 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main',
+    'forum',
     'vacancies',
+    'rent',
+    'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 # Промежуточные ПО, библиотеки, которые обеспечивают безопасность, например
@@ -62,7 +68,7 @@ ROOT_URLCONF = 'livingabroad.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,6 +95,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+AUTH_USER_MODEL = 'forum.Account'
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend'] # new
 
 
 # Password validation
@@ -138,3 +148,8 @@ STATICFILES_DIRS = [
 ]
 
 # Описываются все глобальные настройки проекта
+
+LOGIN_REDIRECT_URL = '/'
+
+
+
